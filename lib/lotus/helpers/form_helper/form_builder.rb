@@ -521,10 +521,10 @@ module Lotus
         end
         alias_method :input_text, :text_field
 
-        def text_area(name, attributes = {})
-          attributes = {name: _input_name(name)}.merge(attributes)
-          content = _value(name)
-          textarea(content, attributes)
+        def text_area(name, content = nil, attributes = {})
+          attributes = {name: _input_name(name), id: _input_id(name)}.merge(attributes)
+          _content = content || _value(name)
+          textarea(_content, attributes)
         end
 
         # Radio input

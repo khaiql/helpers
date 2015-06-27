@@ -756,7 +756,7 @@ describe Lotus::Helpers::FormHelper do
 
     it "allows to specify HTML attributes" do
       actual = view.form_for(:book, action) do
-        text_area :description, nil, class: 'form-control', col: '5'
+        text_area :description, nil, class: 'form-control', cols: '5'
       end.to_s
 
       actual.must_include %(<textarea name="book[description]" id="book-description" class="form-control" col="5"></textarea>)

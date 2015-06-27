@@ -759,7 +759,7 @@ describe Lotus::Helpers::FormHelper do
         text_area :description, nil, class: 'form-control', cols: '5'
       end.to_s
 
-      actual.must_include %(<textarea name="book[description]" id="book-description" class="form-control" col="5"></textarea>)
+      actual.must_include %(<textarea name="book[description]" id="book-description" class="form-control" cols="5"></textarea>)
     end
 
     describe "set content explicitly" do

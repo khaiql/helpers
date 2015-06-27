@@ -521,6 +521,12 @@ module Lotus
         end
         alias_method :input_text, :text_field
 
+        def text_area(name, attributes = {})
+          attributes = {name: _input_name(name)}.merge(attributes)
+          content = _value(name)
+          textarea(content, attributes)
+        end
+
         # Radio input
         #
         # If request params have a value that corresponds to the given value,
@@ -787,4 +793,3 @@ module Lotus
     end
   end
 end
-

@@ -730,7 +730,7 @@ describe Lotus::Helpers::FormHelper do
   end
 
   describe '#text_area' do
-    it "renders " do
+    it "renders the element" do
       actual = view.form_for(:book, action) do
         text_area :description
       end.to_s
